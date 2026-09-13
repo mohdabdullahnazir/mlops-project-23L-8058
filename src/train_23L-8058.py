@@ -50,8 +50,8 @@ def train_model(dataset: pd.DataFrame) -> Pipeline:
         random_state=RANDOM_STATE,
     )
 
-    scaler = "passthrough"  # Feature branches will modify this exact line.
-
+    scaler = MinMaxScaler()  # Min-max feature scaling for 23L-8058.
+    print(f"Feature scaler: {scaler.__class__.__name__}")
     pipeline = Pipeline(
         steps=[
             ("scaler", scaler),
