@@ -18,7 +18,7 @@ MODEL_DIRECTORY = PROJECT_ROOT / "model"
 MODEL_PATH = MODEL_DIRECTORY / f"house_price_model_{STUDENT_ID}.joblib"
 TARGET_COLUMN = "price"
 RANDOM_STATE = 42
-
+N_ESTIMATORS = 150
 
 def load_dataset() -> pd.DataFrame:
     """Load the local CSV dataset and verify the target column."""
@@ -58,7 +58,7 @@ def train_model(dataset: pd.DataFrame) -> Pipeline:
             (
                 "model",
                 RandomForestRegressor(
-                    n_estimators=100,
+                    n_estimators=N_ESTIMATORS,
                     random_state=RANDOM_STATE,
                 ),
             ),
@@ -100,3 +100,10 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    dataset = load_dataset()
+    print(f"Dataset shape: {dataset.shape}")
+    print(f"Number of trees: {N_ESTIMATORS}")
+
+    trained_model = train_model(dataset)
+    
+    
