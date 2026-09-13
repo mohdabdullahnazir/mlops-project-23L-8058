@@ -1,0 +1,28 @@
+# Raw datasets must remain local
+data/**
+!data/README.md
+
+# Generated model artifacts must remain local
+model/**
+!model/README.md
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Serialized machine-learning models
+*.pkl
+*.joblib
+*.h5
+
+# Jupyter temporary files
+.ipynb_checkpoints/
+
+# Operating-system files
+.DS_Store
+Thumbs.db
