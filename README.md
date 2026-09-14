@@ -134,3 +134,11 @@ Only source code, dependency configuration, and documentation are committed.
 
 - Student ID: 23L-8058
 - Project: MLOps Assignment 1
+
+## Version Control Workflow
+
+This project demonstrates staging, descriptive commits, soft and hard resets, isolated feature branches, merge-conflict resolution, history inspection, and temporary context switching with Git stash.
+
+The preprocessing experiment uses `StandardScaler`, while the tuning experiment uses `MinMaxScaler`. Both branches intentionally modified the same training-script line to demonstrate conflict resolution.
+
+Student ID: 23L-8058 
