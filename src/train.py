@@ -4,7 +4,7 @@ from pathlib import Path
 import runpy
 
 
-STUDENT_SCRIPT = Path(__file__).with_name("train_23L-8058.py")
+STUDENT_SCRIPT = Path(__file__).with_name("train_model_23L-8058.py")
 
 
 if __name__ == "__main__":
